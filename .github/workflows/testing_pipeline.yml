@@ -20,6 +20,7 @@ on:
 # A workflow run is made up of one or more jobs
 # that can run sequentially or in parallel
 jobs:
+  # This will create messages for first time contributers and direct them to the Discord server
   welcome:
       runs-on: ubuntu-latest
 
