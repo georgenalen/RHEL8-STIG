@@ -57,7 +57,7 @@ resource "local_file" "inventory" {
           ansible_user: ${var.ami_username}
       vars:
         setup_audit: true
-        run_audit: true
+        run_audit: false
         system_is_ec2: true
     EOF
 }
