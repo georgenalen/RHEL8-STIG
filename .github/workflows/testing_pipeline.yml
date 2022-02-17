@@ -67,13 +67,13 @@ jobs:
 
 ## Debug Section
       - name: DEBUG - Show Ansible hostfile
-        if: ${{ env.ENABLE_DEBUG }} == 'true'
+        if: $env.ENABLE_DEBUG == 'true'
         working-directory: .github/workflows
         run: cat hosts.yml
 
 # Centos 7 images take a while to come up insert sleep or playbook fails
       - name: if RHEL7 - Sleep for 60 seconds
-        if: ${{ env.TEST_OS }} == 'centos7'
+        if: $env.TEST_OS == 'centos7'
         run: sleep 60s
         shell: bash
 
